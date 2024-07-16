@@ -1,4 +1,3 @@
-
 import React, { useContext } from 'react';
 import { ContactContext } from './ContactContext';
 
@@ -10,12 +9,12 @@ const ContactDetails = () => {
       <h2>Contact Details</h2>
       {selectedContact ? (
         <div>
-          <p>name {selectedContact.name}</p>
-          <p>email {selectedContact.email}</p>
-          <p>phone {selectedContact.phone}</p>
+          <p>Name: {selectedContact.name}</p>
+          <p>Email: {selectedContact.email}</p>
+          <p>Phone: {selectedContact.phone}</p>
         </div>
       ) : (
-        <p></p>
+        <p>Please select a contact to see details.</p>
       )}
     </div>
   );

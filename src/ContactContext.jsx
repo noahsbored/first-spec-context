@@ -1,18 +1,16 @@
-// ContactContext.jsx
 import React, { createContext, useState } from 'react';
 
 const ContactContext = createContext();
 
 const ContactProvider = ({ children }) => {
-  const [contacts, ] = useState([
-    { id: 1, name: 'noach', email: 'noach@yooo', phone: '12345678' },
-    { id: 2, name: 'john', email: 'jane@yo', phone: '239439843' },
-    
+  const [contacts] = useState([
+    { id: 1, name: 'Noach', email: 'noach@yooo', phone: '12345678' },
+    { id: 2, name: 'John', email: 'jane@yo', phone: '239439843' },
   ]);
   const [selectedContact, setSelectedContact] = useState(null);
 
   const selectContact = (contactId) => {
-    const contact = contacts.find(contact => contact.id === contactId);
+    const contact = contacts.find((contact) => contact.id === contactId);
     setSelectedContact(contact);
   };
 
